@@ -1,0 +1,4 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/item02" android:title="About" android:icon="@drawable/info"></item>
+<item android:id="@+id/item01" android:title="Logout" android:icon="@drawable/logout"></item>
+</menu>

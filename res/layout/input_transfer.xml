@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/MyStyle.dialog"
+    >
+    <TextView  
+		style="@style/MyStyle.label"
+        android:text="Nomor rekening tujuan"   
+        />         
+	<EditText
+		android:id="@+id/no_rek_tujuan" 
+		android:singleLine="true"
+		android:inputType="phone"		
+		android:digits="1234567890"
+	    style="@style/MyStyle.input" 
+	/>
+    <TextView  
+        style="@style/MyStyle.label"
+        android:text="Jumlah transfer"   
+        /> 	
+	<EditText  
+		android:id="@+id/jumlah_trf" 
+        android:singleLine="true"
+		android:inputType="phone"		
+		android:digits="1234567890"		   
+	    style="@style/MyStyle.input" 
+	/>
+</LinearLayout>

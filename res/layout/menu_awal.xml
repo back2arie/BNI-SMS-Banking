@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ style="@style/MyStyle"
+ android:orientation="horizontal">
+<ImageView
+ android:id="@+id/list_icon"
+ style="@style/MyListIcon" />
+<TextView
+ android:id="@+id/list_menu"
+ style="@style/MyStyle.list_menu.with_icon" />
+</LinearLayout>

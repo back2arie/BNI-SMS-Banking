@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BNI SMS</string>
+    <string name="app_name_long">BNI SMS Banking</string>
+    <string name="app_title">BNI SMS</string>
+    <string name="app_version">v0.1</string>
+    <string name="app_author">Azhari Harahap</string>
+    <string name="author_email">azhari.harahap@yahoo.com</string>
+    
+    <string name="no_BNI">3346</string>
+    <string name="default_pass_BNI">1234</string>
+    <string name="delimiter">" "</string>
+    
+    <string name="notifikasi">Notifikasi</string>
+    <string name="loading">Silahkan Tunggu...</string>
+    <string name="mengirim_sms">Mengirim SMS</string>
+    <string name="sms_berhasil_terkirim">SMS Berhasil Terkirim</string>
+    <string name="sms_gagal_terkirim">SMS Gagal Terkirim</string>
+    <string name="isi_ulang_pulsa">"Isi ulang pulsa "</string>
+    <string name="simpan_password_sukses">Password berhasil disimpan</string>
+    
+    <string name="tombol_lanjut">Lanjutkan</string>
+    <string name="tombol_batal">Batal</string>
+    <string name="tombol_ok">OK</string>
+    <string name="konfirmasi">Konfirmasi</string>
+    
+    <string name="input_no_tagihan">Masukkan nomor tagihan</string>
+    <string name="input_no_ponsel">Masukkan nomor ponsel</string>
+    <string name="input_password">Masukkan password BNI SMS Banking Anda</string>
+    <string name="input_pass">Masukkan password baru</string>
+    <string name="ubah_pass">Ubah Password SMS BNI</string>
+    
+    <string name="title_transfer">Detail Transfer</string>
+    <string name="title_about">About</string>
+    <string name="title_pass_BNI">Password</string>
+    
+    <string name="konf_no_rek_tujuan">Nomor rekening tujuan:</string>
+    <string name="konf_jumlah_trf">Jumlah transfer: </string>
+    <string name="konf_cek_saldo">Cek Saldo?</string>
+    <string name="konf_cek_tagihan">"Cek Tagihan "</string>
+    <string name="konf_no_tagihan">No Tagihan:</string>
+    <string name="konf_nominal_pembayaran">Nominal Pembayaran:</string>
+    <string name="konf_pembayaran">"Pembayaran "</string>
+    <string name="konf_isi_ulang_pulsa">Isi ulang pulsa:</string>
+    <string name="konf_no_ponsel_pulsa">Nomor ponsel:</string>
+    <string name="konf_nominal_pulsa">Nominal pulsa:</string>
+    
+    <string name="menu_cek_saldo">Cek Saldo</string>
+    <string name="menu_cek_tagihan">Cek Tagihan</string>
+    <string name="menu_pembayaran">Pembayaran</string>
+    <string name="menu_isi_ulang_pulsa">Isi Ulang Pulsa</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_kirim_sms">Mengirim SMS</string>
+    
+    <string-array name="menu_array">
+        <item>Cek Saldo</item>
+        <item>Transfer</item>        
+        <item>Cek Tagihan</item>
+        <item>Pembayaran</item>
+        <item>Isi Ulang Pulsa</item>
+    </string-array>
+
+    <string-array name="menu_code">
+        <item>SAL</item>
+        <item>TRF</item>        
+        <item>TAG</item>
+        <item>PAY</item>
+        <item>TOP</item>
+        <item>HELP</item>
+    </string-array>    
+
+    <string-array name="menu_tagihan">
+    	<item>Telkom</item>
+    	<item>Speedy</item>
+    	<item>PLN</item>
+        <item>Kartu Kredit BNI</item>
+        <item>Kartu Halo</item>
+        <item>Kartu Matrix</item>
+        <item>Kartu StarOne</item>
+        <item>Kartu Xplor</item>
+    </string-array>    
+ 
+     <string-array name="kode_tagihan">
+    	<item>TELKOM</item>
+    	<item>TELKOM</item>
+    	<item>PLN</item>
+        <item>BNI</item>
+        <item>HALO</item>
+        <item>Matrix</item>
+        <item>StarOne</item>
+        <item>Xplor</item>
+    </string-array>   
+
+    <string-array name="menu_pembayaran">
+    	<item>Telkom</item>
+    	<item>Speedy</item>
+    	<item>PLN</item>
+    	<item>PDAM Bandung</item>
+        <item>Kartu Halo</item>
+        <item>Kartu Matrix</item>
+        <item>Kartu StarOne</item>
+        <item>Kartu Xplor</item>
+        <item>Tiket Garuda</item>
+        <item>Tiket Lion Air</item>
+        <item>Tiket Air Asia</item>
+        <item>Tiket Mandala</item>
+        <item>Kartu Kredit BNI</item>
+        <item>Kartu Kredit Standar Chartered Bank</item>
+        <item>Kartu Kredit HSBC</item>
+        <item>Kartu Kredit NIAGA</item>
+        <item>Kartu Kredit ABNAMRO</item>
+        <item>Kartu Kredit ANZ</item>
+        <item>Kartu Kredit GE</item>
+        <item>Kartu Kredit Mega</item>
+        <item>Kartu Kredit Citibank dan Ready Cash</item>
+    </string-array>    
+
+     <string-array name="kode_pembayaran">
+    	<item>TELKOM</item>
+    	<item>TELKOM</item>
+    	<item>PLN</item>
+    	<item>PAM BANDUNG</item>
+        <item>HALO</item>
+        <item>Matrix</item>
+        <item>StarOne</item>
+        <item>Xplor</item>
+        <item>GARUDA</item>
+        <item>LION</item>
+        <item>AIRASIA</item>
+        <item>MANDALA</item>
+        <item>BNI</item>
+		<item>SCB</item>
+		<item>HSBC</item>
+		<item>NIAGA</item>
+		<item>ABNAMRO</item>
+		<item>ANZ</item>
+		<item>GE</item>
+		<item>MEGA</item>
+		<item>CITIBANK</item>
+    </string-array>
+
+     <string-array name="perlu_amount">
+    	<item>no</item>
+    	<item>no</item>
+    	<item>no</item>
+    	<item>no</item>
+        <item>no</item>
+        <item>no</item>
+        <item>no</item>
+        <item>no</item>
+        <item>no</item>
+        <item>no</item>
+        <item>no</item>
+        <item>no</item>       
+        <item>yes</item>
+        <item>yes</item>
+        <item>yes</item>
+        <item>yes</item>
+        <item>yes</item>
+        <item>yes</item>
+        <item>yes</item>
+        <item>yes</item>
+        <item>yes</item>
+    </string-array>   
+ 
+    <string-array name="setting_array">
+        <item>Password SMS BNI</item>
+    </string-array>    
+
+    <string-array name="operator_pulsa">
+    	<item>SimPATI</item>
+    	<item>As</item>
+    	<item>Mentari</item>
+        <item>IM3</item>
+        <item>StarOne</item>
+        <item>Jempol</item>
+        <item>XL Voucher</item>
+        <item>XL Bebas Xtra</item>
+        <item>Flexi</item>
+        <item>Fren</item>
+        <item>Esia</item>
+        <item>3 (Three)</item>
+    </string-array>   
+
+    <string-array name="kode_operator_pulsa">
+    	<item></item>
+    	<item></item>
+    	<item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>XL</item>
+        <item>XTRA</item>
+        <item>FLEXI</item>
+        <item>FREN</item>
+        <item>ESIA</item>
+        <item>3</item>
+    </string-array>     
+
+
+    <!-- =========================================== -->
+    <!--  Nominal pulsa berdasarkan urutan Operator  -->
+    <!-- =========================================== -->
+
+    <string-array name="nominal_pulsa_0">
+    	<item>50 Ribu</item>
+    	<item>150 Ribu</item>
+    	<item>200 Ribu</item>
+        <item>300 Ribu</item>
+        <item>500 Ribu</item>
+        <item>1 Juta</item>
+    </string-array>    
+
+    <string-array name="nominal_pulsa_1">
+    	<item>25 Ribu</item>
+    	<item>50 Ribu</item>
+    	<item>150 Ribu</item>
+    	<item>200 Ribu</item>
+        <item>300 Ribu</item>
+        <item>500 Ribu</item>
+        <item>1 Juta</item>
+    </string-array>       
+
+    <string-array name="nominal_pulsa_2">
+    	<item>25 Ribu</item>
+    	<item>50 Ribu</item>
+    	<item>100 Ribu</item>
+    	<item>200 Ribu</item>
+        <item>300 Ribu</item>
+        <item>500 Ribu</item>
+    </string-array>  
+
+    <string-array name="nominal_pulsa_3">
+    	<item>25 Ribu</item>
+    	<item>50 Ribu</item>
+    	<item>100 Ribu</item>
+    	<item>200 Ribu</item>
+        <item>300 Ribu</item>
+        <item>500 Ribu</item>
+    </string-array>     
+
+    <string-array name="nominal_pulsa_4">
+    	<item>25 Ribu</item>
+    	<item>50 Ribu</item>
+    	<item>100 Ribu</item>
+    	<item>200 Ribu</item>
+        <item>300 Ribu</item>
+        <item>500 Ribu</item>
+    </string-array> 
+
+    <string-array name="nominal_pulsa_5">
+    	<item>25 Ribu</item>
+    	<item>75 Ribu</item>
+    	<item>100 Ribu</item>
+    	<item>150 Ribu</item>
+        <item>200 Ribu</item>
+        <item>300 Ribu</item>
+    </string-array>     
+                      
+    <string-array name="nominal_pulsa_6">
+    	<item>25 Ribu</item>
+    	<item>75 Ribu</item>
+    	<item>100 Ribu</item>
+    	<item>150 Ribu</item>
+        <item>200 Ribu</item>
+        <item>300 Ribu</item>
+    </string-array>      
+    
+    <string-array name="nominal_pulsa_7">
+    	<item>35 Ribu</item>
+    	<item>100 Ribu</item>
+    </string-array>      
+
+    <string-array name="nominal_pulsa_8">
+    	<item>50 Ribu</item>
+    	<item>100 Ribu</item>
+    	<item>150 Ribu</item>
+    	<item>200 Ribu</item>
+        <item>250 Ribu</item>
+        <item>350 Ribu</item>
+        <item>500 Ribu</item>
+    </string-array>
+
+    <string-array name="nominal_pulsa_9">
+    	<item>50 Ribu</item>
+    	<item>100 Ribu</item>
+    	<item>150 Ribu</item>
+    	<item>200 Ribu</item>
+        <item>250 Ribu</item>
+        <item>350 Ribu</item>
+        <item>500 Ribu</item>
+    </string-array>          
+
+    <string-array name="nominal_pulsa_10">
+    	<item>25 Ribu</item>
+    	<item>50 Ribu</item>
+    	<item>100 Ribu</item>
+    	<item>150 Ribu</item>
+    </string-array> 
+
+    <string-array name="nominal_pulsa_11">
+    	<item>30 Ribu</item>
+    	<item>50 Ribu</item>
+    	<item>100 Ribu</item>
+    	<item>150 Ribu</item>
+    	<item>300 Ribu</item>
+    	<item>500 Ribu</item>
+    </string-array>                
+</resources>

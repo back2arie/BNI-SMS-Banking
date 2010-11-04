@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/MyStyle.dialog"
+    >
+    <TextView  
+		style="@style/MyStyle.label"
+        android:text="Nomor tagihan"   
+        />         
+	<EditText
+		android:id="@+id/no_tagihan" 
+		android:singleLine="true"
+		android:inputType="phone"		
+		android:digits="1234567890"
+	    style="@style/MyStyle.input" 
+	/>
+    <TextView  
+        style="@style/MyStyle.label"
+        android:text="Nominal pembayaran"   
+        /> 	
+	<EditText  
+		android:id="@+id/jumlah_bayar" 
+        android:singleLine="true"
+		android:inputType="phone"		
+		android:digits="1234567890"		   
+	    style="@style/MyStyle.input" 
+	/>
+</LinearLayout>

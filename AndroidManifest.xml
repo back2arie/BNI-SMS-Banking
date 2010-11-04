@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest package="com.back2arie.bnismsbanking"
+      android:versionCode="1"
+      android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<uses-sdk android:targetSdkVersion="7"></uses-sdk>
+<application android:label="@string/app_name" android:icon="@drawable/bni46" android:debuggable="true">
+	<activity android:name="com.back2arie.bnismsbanking.BNISMS" android:label="@string/app_name_long"
+			  android:launchMode="standard" android:exported="true">
+	  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+	</activity>
+	<activity android:name="com.back2arie.bnismsbanking.MenuTagihan" android:label="@string/menu_cek_tagihan"></activity>
+	<activity android:name="com.back2arie.bnismsbanking.IsiPulsa" android:label="@string/menu_isi_ulang_pulsa"></activity>
+	<activity android:name="com.back2arie.bnismsbanking.NominalPulsa" android:label="@string/menu_isi_ulang_pulsa"></activity>
+	<activity android:name="com.back2arie.bnismsbanking.KirimSMS" android:label="@string/menu_kirim_sms"></activity>
+	<activity android:name="com.back2arie.bnismsbanking.Pembayaran" android:label="@string/menu_pembayaran"></activity>
+	<activity android:name="com.back2arie.bnismsbanking.Setting" android:label="@string/menu_setting"></activity>
+</application>
+<uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+
+</manifest> 
