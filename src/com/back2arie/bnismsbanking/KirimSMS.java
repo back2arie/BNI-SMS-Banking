@@ -15,7 +15,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.telephony.SmsManager;
-import android.util.Log;
+//import android.util.Log;
 
 
 public class KirimSMS extends Activity {
@@ -24,12 +24,13 @@ public class KirimSMS extends Activity {
 	String phoneNo;
 	String message;
 	Boolean status;
+	public static final String PREFS_NAME = "MyPrefsFile";
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
        	super.onCreate(savedInstanceState);
  
-        SharedPreferences settings = getPreferences(0);
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         String pass_BNI = settings.getString("pass_BNI", getResources().getString(R.string.default_pass_BNI));
        	phoneNo = getResources().getString(R.string.no_BNI);
        	message = this.getIntent().getExtras().getString("message");
@@ -93,7 +94,8 @@ public class KirimSMS extends Activity {
 			    Thread.sleep(500); /* FIXME */
 			} 
 			catch (InterruptedException e) {
-			    Log.e("ERROR", "Thread Interrupted");
+				// Show exception
+			    //Log.e("ERROR", "Thread Interrupted");
 			}
 			
 			final Message msg = mHandler.obtainMessage();

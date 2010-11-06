@@ -31,6 +31,7 @@ public class BNISMS extends ListActivity {
 	private Integer pilihan;
 	private AlertDialog konfirmasi;
 	private DialogInterface.OnClickListener ok_listener;
+	public static final String PREFS_NAME = "MyPrefsFile";
 	
 	public class MyCustomAdapter extends ArrayAdapter<String> {
 
@@ -72,29 +73,33 @@ public class BNISMS extends ListActivity {
 	public void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
        
-       // Input password
-       SharedPreferences settings = getPreferences(0);
+       // Saved password (cached)
+       SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
        String pass_BNI = settings.getString("pass_BNI", null);
        
        if(pass_BNI==null) {
-    	   // Password belum di set   	   
-    	    AlertDialog password = new AlertDialog.Builder(BNISMS.this).create();
-    	    final EditText input_password = new EditText(BNISMS.this);
-    	    password.setView(input_password);
-    	    password.setCancelable(false);
+    	   // Password belum di set   
+    	   LayoutInflater factory = LayoutInflater.from(BNISMS.this);
+		   final View passEntryView = factory.inflate(R.layout.input_password, null);
+		   final EditText input_password = (EditText) passEntryView .findViewById(R.id.pass_BNI); 
+		   
+    	   AlertDialog password = new AlertDialog.Builder(BNISMS.this).create();
+    	   //final EditText input_password = new EditText(BNISMS.this);
+    	   password.setView(passEntryView);
+    	   //password.setView(input_password);
+    	   //password.setCancelable(false);
     	    
-    		DialogInterface.OnClickListener password_listener = new DialogInterface.OnClickListener() {
+    	   DialogInterface.OnClickListener password_listener = new DialogInterface.OnClickListener() {
                 @Override
 				public void onClick(DialogInterface dialog, int id) {
 	            	  String input_pass_BNI = input_password.getText().toString().trim();
-	                  SharedPreferences settings = getPreferences(0);
+	                  SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 	                  SharedPreferences.Editor editor = settings.edit();
 	                  
 	                  editor.putString("pass_BNI", input_pass_BNI);
 	                  editor.commit();
 	                  
-	                  Toast.makeText(BNISMS.this, getResources().getString(R.string.simpan_password_sukses), Toast.LENGTH_SHORT).show();
-                }
+	                  Toast.makeText(BNISMS.this, getResources().getString(R.string.simpan_password_sukses), Toast.LENGTH_SHORT).show();                }
             };
     	    
     	    String pesan = getResources().getString(R.string.input_password);
@@ -236,7 +241,7 @@ public boolean onOptionsItemSelected(MenuItem item) {
        switch (item.getItemId()) {
        case R.id.item01:
     	   	// Remove password
-			SharedPreferences settings = getPreferences(0);
+			SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 			SharedPreferences.Editor editor = settings.edit();
 			editor.clear();
 			editor.commit();
