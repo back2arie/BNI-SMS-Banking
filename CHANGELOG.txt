@@ -1,0 +1,13 @@
+CHANGELOG
+==========
+
+1.0 (4 november 2010)
+	- Initial release
+	
+1.1 (6 November 2011)
+	- Bugfix: password
+	- Turn off debugging
+	
+1.6 (31 Juli 2011)
+	- Bugfix: Nominal pulsa tidak sesuai dengan pilihan
+	- Update contact email

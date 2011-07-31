@@ -54,11 +54,12 @@ public class NominalPulsa extends ListActivity {
 	        	   AlertDialog isi_pulsa = new AlertDialog.Builder(NominalPulsa.this).create();
 	        	   final EditText input = new EditText(NominalPulsa.this);
 	        	   isi_pulsa.setView(input);
+	        	   final String nominal = ((TextView) view).getText().toString();
 	        	   
 	        	   DialogInterface.OnClickListener ok_listener = new DialogInterface.OnClickListener() {
      	              @Override
 					public void onClick(DialogInterface dialog, int id) {
-     	            	  String nominal = ((TextView) view).getText().toString();
+     	            	  
 		            	  String no_ponsel = input.getText().toString().trim();
 		            	  String delimiter = getResources().getString(R.string.delimiter);
 		            	  kode_terpilih = kode_operator[OID];
