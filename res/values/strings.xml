@@ -3,12 +3,11 @@
     <string name="app_name">BNI SMS</string>
     <string name="app_name_long">BNI SMS Banking</string>
     <string name="app_title">BNI SMS</string>
-    <string name="app_version">v1.6</string>
+    <string name="app_version">v2.1</string>
     <string name="app_author">Azhari Harahap</string>
     <string name="author_email">azhari@harahap.us</string>
     
     <string name="no_BNI">3346</string>
-    <string name="default_pass_BNI">1234</string>
     <string name="delimiter">" "</string>
     
     <string name="notifikasi">Notifikasi</string>

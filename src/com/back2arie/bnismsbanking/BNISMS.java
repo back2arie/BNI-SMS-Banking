@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,7 +17,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ImageView;
-import android.widget.Toast;
 import android.view.ViewGroup;
 import android.content.Context;
 import java.text.NumberFormat;
@@ -72,42 +70,6 @@ public class BNISMS extends ListActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
-       
-       // Saved password (cached)
-       SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-       String pass_BNI = settings.getString("pass_BNI", null);
-       
-       if(pass_BNI==null) {
-    	   // Password belum di set   
-    	   LayoutInflater factory = LayoutInflater.from(BNISMS.this);
-		   final View passEntryView = factory.inflate(R.layout.input_password, null);
-		   final EditText input_password = (EditText) passEntryView .findViewById(R.id.pass_BNI); 
-		   
-    	   AlertDialog password = new AlertDialog.Builder(BNISMS.this).create();
-    	   //final EditText input_password = new EditText(BNISMS.this);
-    	   password.setView(passEntryView);
-    	   //password.setView(input_password);
-    	   //password.setCancelable(false);
-    	    
-    	   DialogInterface.OnClickListener password_listener = new DialogInterface.OnClickListener() {
-                @Override
-				public void onClick(DialogInterface dialog, int id) {
-	            	  String input_pass_BNI = input_password.getText().toString().trim();
-	                  SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-	                  SharedPreferences.Editor editor = settings.edit();
-	                  
-	                  editor.putString("pass_BNI", input_pass_BNI);
-	                  editor.commit();
-	                  
-	                  Toast.makeText(BNISMS.this, getResources().getString(R.string.simpan_password_sukses), Toast.LENGTH_SHORT).show();                }
-            };
-    	    
-    	    String pesan = getResources().getString(R.string.input_password);
-    	    password.setMessage(pesan);
-    	    password.setTitle(getResources().getString(R.string.title_pass_BNI));
-    	    password.setButton(DialogInterface.BUTTON_NEUTRAL, getResources().getString(R.string.tombol_ok), password_listener);
-    	    password.show();
-       }
        
        list_menu = getListView();
        list_menu.setTextFilterEnabled(true);
@@ -238,15 +200,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
 @Override
 public boolean onOptionsItemSelected(MenuItem item) {
        // Handle item selection
-       switch (item.getItemId()) {
-       case R.id.item01:
-    	   	// Remove password
-			SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-			SharedPreferences.Editor editor = settings.edit();
-			editor.clear();
-			editor.commit();
-			BNISMS.this.finish();
-           return true;           
+       switch (item.getItemId()) {          
        case R.id.item02:
     	   menuAbout();
            return true;
@@ -264,7 +218,7 @@ protected void menuAbout() {
         };
 	   AlertDialog about = new AlertDialog.Builder(BNISMS.this).create();
 	   about.setTitle(getResources().getString(R.string.title_about));
-	   String message = getResources().getString(R.string.app_name_long) + " " + getResources().getString(R.string.app_version) + "\n\n" + 
+	   String message = "(Unofficial) " + getResources().getString(R.string.app_name_long) + " " + getResources().getString(R.string.app_version) + "\n\n" + 
 	   					getResources().getString(R.string.app_author) + "\n<" + getResources().getString(R.string.author_email) + ">";
 	   about.setMessage(message);
 	   about.setButton(DialogInterface.BUTTON_NEUTRAL, getResources().getString(R.string.tombol_ok), cancel_listener);

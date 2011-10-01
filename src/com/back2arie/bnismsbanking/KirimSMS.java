@@ -10,7 +10,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -29,12 +28,9 @@ public class KirimSMS extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
        	super.onCreate(savedInstanceState);
- 
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        String pass_BNI = settings.getString("pass_BNI", getResources().getString(R.string.default_pass_BNI));
+       	
        	phoneNo = getResources().getString(R.string.no_BNI);
        	message = this.getIntent().getExtras().getString("message");
-       	message = message + getResources().getString(R.string.delimiter) + pass_BNI;       	
        	
         progressDialog = new ProgressDialog(KirimSMS.this);
         progressDialog.setTitle(getResources().getString(R.string.loading));
