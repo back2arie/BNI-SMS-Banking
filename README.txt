@@ -6,3 +6,11 @@ Transaksi yang didukung antara lain cek saldo, transfer, cek tagihan, pembayaran
 
 Untuk penjelasan selengkapnya silahkan mengakses halaman http://back2arie.wordpress.com/
 Lisensi dari aplikasi ini adalah GNU GPLv3 <http://www.gnu.org/licenses/gpl-3.0.txt>
+
+
+## TODO
+* Validasi input
+* History transaksi
+* Menangkap SMS yang masuk dari BNI (3346), sehingga user tidak perlu membuka inbox lagi.
+* Kirim pulsa dengan nomor dari phonebook.
+* Ada ide/masukan yang lain? :D
