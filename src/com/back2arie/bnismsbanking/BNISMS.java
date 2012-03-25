@@ -51,15 +51,18 @@ public class BNISMS extends ListActivity {
 			 		icon.setImageResource(R.drawable.cek_saldo);
 			 	break;
 			 	case 1:
-			 		icon.setImageResource(R.drawable.transfer);
+			 		icon.setImageResource(R.drawable.history_transaksi);
 			 	break;
 			 	case 2:
+			 		icon.setImageResource(R.drawable.transfer);
+			 	break;
+			 	case 3:
 			 		icon.setImageResource(R.drawable.cek_tagihan);
 			 	break;	
-			 	case 3:
+			 	case 4:
 			 		icon.setImageResource(R.drawable.pembayaran);
 			 	break;	
-			 	case 4:
+			 	case 5:
 			 		icon.setImageResource(R.drawable.isi_pulsa);
 			 	break;		 		
 			}
@@ -113,8 +116,31 @@ public class BNISMS extends ListActivity {
 						   konfirmasi.setButton(DialogInterface.BUTTON_NEGATIVE, getResources().getString(R.string.tombol_batal), cancel_listener);
 						   konfirmasi.show();
 					break;
+
+					case 1:	// History Transaksi
+						   konfirmasi = new AlertDialog.Builder(BNISMS.this).create();
+						   konfirmasi.setTitle(getResources().getString(R.string.konfirmasi));
+						   konfirmasi.setMessage(getResources().getString(R.string.konf_cek_history));
+						   
+						   ok_listener = new DialogInterface.OnClickListener() {
+					              @Override
+								public void onClick(DialogInterface dialog, int id) {
+					            	  // Kirim SMS
+					            	  kode_terpilih = kode[pilihan];
+						              String message = kode_terpilih;	    		        	                
+						              	    		        	              
+						   			  Intent sms = new Intent(view.getContext(), KirimSMS.class);
+						   			  sms.putExtra("message", message);
+						   			  startActivity(sms); 
+					              }
+					       };
+						   
+						   konfirmasi.setButton(DialogInterface.BUTTON_POSITIVE, getResources().getString(R.string.tombol_lanjut), ok_listener);
+						   konfirmasi.setButton(DialogInterface.BUTTON_NEGATIVE, getResources().getString(R.string.tombol_batal), cancel_listener);
+						   konfirmasi.show();
+					break;
 					
-					case 1: // Transfer     		   			
+					case 2: // Transfer     		   			
 							LayoutInflater factory = LayoutInflater.from(BNISMS.this);
 							final View textEntryView = factory.inflate(R.layout.input_transfer, null);
 							
@@ -165,21 +191,21 @@ public class BNISMS extends ListActivity {
 							konfirmasi.show();
 					break;
 					
-					case 2: // Tagihan
+					case 3: // Tagihan
 						Intent tagihan = new Intent(view.getContext(), MenuTagihan.class);
 						kode_terpilih = kode[pilihan];
 						tagihan.putExtra("kode", kode_terpilih);
 						startActivity(tagihan);    		   			
 					break;
 					
-					case 3: // Pembayaran
+					case 4: // Pembayaran
 					    Intent pembayaran = new Intent(view.getContext(), Pembayaran.class);
 					    kode_terpilih = kode[pilihan];
 					    pembayaran.putExtra("kode", kode_terpilih);
 					    startActivity(pembayaran);    		   			
 					break;   	  
 					    
-					case 4: // Isi ulang pulsa
+					case 5: // Isi ulang pulsa
 					    Intent pulsa = new Intent(view.getContext(), IsiPulsa.class);
 					    kode_terpilih = kode[pilihan];
 					    pulsa.putExtra("kode", kode_terpilih);        	            

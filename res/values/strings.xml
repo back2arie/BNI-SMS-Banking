@@ -36,6 +36,7 @@
     <string name="konf_no_rek_tujuan">Nomor rekening tujuan:</string>
     <string name="konf_jumlah_trf">Jumlah transfer: </string>
     <string name="konf_cek_saldo">Cek Saldo?</string>
+    <string name="konf_cek_history">Cek History Transaksi?</string>
     <string name="konf_cek_tagihan">"Cek Tagihan "</string>
     <string name="konf_no_tagihan">No Tagihan:</string>
     <string name="konf_nominal_pembayaran">Nominal Pembayaran:</string>
@@ -53,6 +54,7 @@
     
     <string-array name="menu_array">
         <item>Cek Saldo</item>
+        <item>History Transaksi</item>
         <item>Transfer</item>        
         <item>Cek Tagihan</item>
         <item>Pembayaran</item>
@@ -61,6 +63,7 @@
 
     <string-array name="menu_code">
         <item>SAL</item>
+        <item>HST</item>
         <item>TRF</item>        
         <item>TAG</item>
         <item>PAY</item>
