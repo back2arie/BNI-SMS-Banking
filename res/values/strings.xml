@@ -3,7 +3,7 @@
     <string name="app_name">BNI SMS</string>
     <string name="app_name_long">BNI SMS Banking</string>
     <string name="app_title">BNI SMS</string>
-    <string name="app_version">v2.1</string>
+    <string name="app_version">v3.0</string>
     <string name="app_author">Azhari Harahap</string>
     <string name="author_email">azhari@harahap.us</string>
     
@@ -33,8 +33,10 @@
     <string name="title_about">About</string>
     <string name="title_pass_BNI">Password</string>
     
+    <string name="konf_bank_tujuan">Bank tujuan:</string>
     <string name="konf_no_rek_tujuan">Nomor rekening tujuan:</string>
     <string name="konf_jumlah_trf">Jumlah transfer: </string>
+    <string name="konf_no_referensi">Nomor Referensi: </string>
     <string name="konf_cek_saldo">Cek Saldo?</string>
     <string name="konf_cek_history">Cek History Transaksi?</string>
     <string name="konf_cek_tagihan">"Cek Tagihan "</string>
@@ -46,6 +48,8 @@
     <string name="konf_nominal_pulsa">Nominal pulsa:</string>
     
     <string name="menu_cek_saldo">Cek Saldo</string>
+    <string name="menu_transfer">Transfer</string>
+    <string name="menu_transfer_antar_bank">Transfer Antar Bank</string>
     <string name="menu_cek_tagihan">Cek Tagihan</string>
     <string name="menu_pembayaran">Pembayaran</string>
     <string name="menu_isi_ulang_pulsa">Isi Ulang Pulsa</string>
@@ -69,6 +73,170 @@
         <item>PAY</item>
         <item>TOP</item>
         <item>HELP</item>
+    </string-array>    
+    
+    <string-array name="menu_transfer">
+        <item>Ke Rekening BNI</item>
+        <item>Ke Rekening Bank Lain</item>
+    </string-array>    
+    
+    <string-array name="kode_transfer">
+        <item>Berita</item>
+        <item>Antarbank</item>
+    </string-array>    
+    
+    <string-array name="nama_bank">
+        <item>ANZ-Panin Bank</item>
+        <item>Bank Aceh</item>
+        <item>Bank Agroniaga</item>
+        <item>Bank Artos Indonesia</item>
+        <item>Bank Bengkulu</item>
+        <item>Bank BJB</item>
+        <item>Bank BNP</item>
+        <item>Bank BPD Kalsel</item>
+        <item>Bank BPD Kaltim</item>
+        <item>Bank Bukopin</item>
+        <item>Bank Capital</item>
+        <item>Bank Commonwealth</item>
+        <item>Bank DKI</item>
+        <item>Bank Ekonomi</item>
+        <item>Bank Ganesha</item>
+        <item>Bank ICB Bumiputera</item>
+        <item>Bank Ina Perdana</item>
+        <item>Bank Index</item>
+        <item>Bank Jabar Banten Syariah</item>
+        <item>Bank Jambi</item>
+        <item>Bank Jateng</item>
+        <item>Bank Jatim</item>
+        <item>Bank Kalbar</item>
+        <item>Bank Kesejahteraan</item>
+        <item>Bank Lampung</item>
+        <item>Bank Maluku</item>
+        <item>Bank Mayapada Internasional</item>
+        <item>Bank Mayora</item>
+        <item>Bank Mega</item>
+        <item>Bank Mestika</item>
+        <item>Bank Muamalat</item>
+        <item>Bank Nagari</item>
+        <item>Bank Nobu</item>
+        <item>Bank NTB</item>
+        <item>Bank NTT</item>
+        <item>Bank of India Indonesia</item>
+        <item>Bank Panin</item>
+        <item>Bank Papua</item>
+        <item>Bank Pundi</item>
+        <item>Bank QNB Kesawan</item>
+        <item>Bank Riau Kepri</item>
+        <item>Bank Saudara</item>
+        <item>Bank Sinarmas</item>
+        <item>Bank Sulselbar</item>
+        <item>Bank Sulteng</item>
+        <item>Bank Sultra</item>
+        <item>Bank Sulut</item>
+        <item>Bank Sumsel Babel</item>
+        <item>Bank Sumut</item>
+        <item>Bank Syariah Mandiri</item>
+        <item>Bank Syariah Mega Indonesia</item>
+        <item>BII Maybank</item>
+        <item>BNI 46</item>
+        <item>BPD Bali</item>
+        <item>BPD DIY</item>
+        <item>BPD Kalteng</item>
+        <item>BPR Karyajatnika Sadaya</item>
+        <item>BPR Semoga Jaya</item>
+        <item>BRI</item>
+        <item>BRI Syariah</item>
+        <item>BTN</item>
+        <item>BTPN</item>
+        <item>CIMB Niaga</item>
+        <item>Citibank</item>
+        <item>Danamon</item>
+        <item>DBS</item>
+        <item>HSBC</item>
+        <item>Mandiri</item>
+        <item>Mutiara Bank</item>
+        <item>OCBC NISP</item>
+        <item>Permata Bank</item>
+        <item>Rabobank</item>
+        <item>Standard Chartered Bank</item>
+        <item>UOB Buana</item>
+    </string-array>    
+    
+    <string-array name="kode_bank">
+        <item>061</item>
+        <item>116</item>
+        <item>494</item>
+        <item>542</item>
+        <item>133</item>
+        <item>110</item>
+        <item>145</item>
+        <item>122</item>
+        <item>124</item>
+        <item>441</item>
+        <item>054</item>
+        <item>950</item>
+        <item>111</item>
+        <item>087</item>
+        <item>161</item>
+        <item>485</item>
+        <item>513</item>
+        <item>555</item>
+        <item>425</item>
+        <item>115</item>
+        <item>113</item>
+        <item>114</item>
+        <item>123</item>
+        <item>535</item>
+        <item>121</item>
+        <item>131</item>
+        <item>097</item>
+        <item>553</item>
+        <item>426</item>
+        <item>151</item>
+        <item>147</item>
+        <item>118</item>
+        <item>503</item>
+        <item>128</item>
+        <item>130</item>
+        <item>146</item>
+        <item>019</item>
+        <item>132</item>
+        <item>558</item>
+        <item>167</item>
+        <item>119</item>
+        <item>212</item>
+        <item>153</item>
+        <item>126</item>
+        <item>134</item>
+        <item>135</item>
+        <item>127</item>
+        <item>120</item>
+        <item>117</item>
+        <item>451</item>
+        <item>506</item>
+        <item>016</item>
+        <item>009</item>
+        <item>129</item>
+        <item>112</item>
+        <item>125</item>
+        <item>558</item>
+        <item>558</item>
+        <item>002</item>
+        <item>422</item>
+        <item>200</item>
+        <item>213</item>
+        <item>022</item>
+        <item>031</item>
+        <item>011</item>
+        <item>046</item>
+        <item>041</item>
+        <item>008</item>
+        <item>095</item>
+        <item>028</item>
+        <item>013</item>
+        <item>089</item>
+        <item>050</item>
+        <item>023</item>
     </string-array>    
 
     <string-array name="menu_tagihan">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest package="com.back2arie.bnismsbanking"
-      android:versionCode="5"
-      android:versionName="2.2" xmlns:android="http://schemas.android.com/apk/res/android">
+      android:versionCode="7"
+      android:versionName="3.0" xmlns:android="http://schemas.android.com/apk/res/android">
 
 <uses-sdk android:targetSdkVersion="7"></uses-sdk>
 <application android:label="@string/app_name" android:icon="@drawable/bni46">
@@ -12,6 +12,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
 	</activity>
+	<activity android:name="com.back2arie.bnismsbanking.MenuTransfer" android:label="@string/menu_transfer"></activity>
+	<activity android:name="com.back2arie.bnismsbanking.TransferAntarBank" android:label="@string/menu_transfer_antar_bank"></activity>
 	<activity android:name="com.back2arie.bnismsbanking.MenuTagihan" android:label="@string/menu_cek_tagihan"></activity>
 	<activity android:name="com.back2arie.bnismsbanking.IsiPulsa" android:label="@string/menu_isi_ulang_pulsa"></activity>
 	<activity android:name="com.back2arie.bnismsbanking.NominalPulsa" android:label="@string/menu_isi_ulang_pulsa"></activity>

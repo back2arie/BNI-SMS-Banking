@@ -13,13 +13,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.view.ViewGroup;
 import android.content.Context;
-import java.text.NumberFormat;
 
 public class BNISMS extends ListActivity {	
 	private ListView list_menu;
@@ -141,54 +139,10 @@ public class BNISMS extends ListActivity {
 					break;
 					
 					case 2: // Transfer     		   			
-							LayoutInflater factory = LayoutInflater.from(BNISMS.this);
-							final View textEntryView = factory.inflate(R.layout.input_transfer, null);
-							
-							konfirmasi = new AlertDialog.Builder(BNISMS.this).create();
-							final EditText input_no_rek_tujuan = (EditText) textEntryView .findViewById(R.id.no_rek_tujuan); 
-							final EditText input_jumlah_trf = (EditText) textEntryView .findViewById(R.id.jumlah_trf);						       
-												
-							ok_listener = new DialogInterface.OnClickListener() {
-					              @Override
-								public void onClick(DialogInterface dialog, int id) {
-					            	  String no_rek_tujuan = input_no_rek_tujuan.getText().toString().trim();
-					            	  String jumlah_trf = input_jumlah_trf.getText().toString().trim();
-					            	  String delimiter = getResources().getString(R.string.delimiter);
-					            	  kode_terpilih = kode[pilihan];
-				    	              final String message = kode_terpilih + delimiter + no_rek_tujuan + delimiter + jumlah_trf;
-					            	  
-				        	      		DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
-				        	                @Override
-											public void onClick(DialogInterface dialog, int id) {				        	                	
-				        	                	// Kirim SMS
-						      		   			Intent sms = new Intent(view.getContext(), KirimSMS.class);
-						      		   			sms.putExtra("message", message);
-						      		   			startActivity(sms);
-				        	                }
-				        	            };
-				    	              
-				        	            // Format jumlah transfer ke format currency
-				        	            NumberFormat nf = NumberFormat.getInstance();
-				        	            String jumlah_trf_hum = nf.format(Integer.parseInt(jumlah_trf));
-				        	            
-				        	      		AlertDialog alert = new AlertDialog.Builder(BNISMS.this).create();
-				        	    		alert.setTitle(getResources().getString(R.string.konfirmasi));
-				        	    		String isi_konfirmasi = getResources().getString(R.string.konf_no_rek_tujuan) + "\n" + no_rek_tujuan + "\n\n" +   
-				        	    								getResources().getString(R.string.konf_jumlah_trf) + "\n" + jumlah_trf_hum;
-				        	    		
-				        	    		alert.setMessage(isi_konfirmasi);
-				        	    		alert.setCancelable(false);
-				        	    		alert.setButton(DialogInterface.BUTTON_POSITIVE, getResources().getString(R.string.tombol_lanjut), listener);
-				        	    		alert.setButton(DialogInterface.BUTTON_NEGATIVE, getResources().getString(R.string.tombol_batal), cancel_listener);
-				        	    		alert.show();
-					              }
-							};
-							
-							konfirmasi.setView(textEntryView);
-							konfirmasi.setTitle(getResources().getString(R.string.title_transfer));
-							konfirmasi.setButton(DialogInterface.BUTTON_POSITIVE, getResources().getString(R.string.tombol_lanjut), ok_listener);
-							konfirmasi.setButton(DialogInterface.BUTTON_NEGATIVE, getResources().getString(R.string.tombol_batal), cancel_listener);
-							konfirmasi.show();
+						Intent transfer = new Intent(view.getContext(), MenuTransfer.class);
+						kode_terpilih = kode[pilihan];
+						transfer.putExtra("kode", kode_terpilih);
+						startActivity(transfer);    		   			
 					break;
 					
 					case 3: // Tagihan

@@ -25,4 +25,15 @@
 		android:digits="1234567890"		   
 	    style="@style/MyStyle.input" 
 	/>
+    <TextView  
+        style="@style/MyStyle.label"
+        android:text="Nomor Referensi"   
+        /> 	
+	<EditText  
+		android:id="@+id/no_referensi" 
+        android:singleLine="true"
+		android:inputType="phone"		
+		android:digits="1234567890"		   
+	    style="@style/MyStyle.input" 
+	/>
 </LinearLayout>

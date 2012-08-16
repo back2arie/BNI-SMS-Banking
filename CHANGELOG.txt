@@ -11,3 +11,12 @@ CHANGELOG
 1.6 (31 Juli 2011)
 	- Bugfix: Nominal pulsa tidak sesuai dengan pilihan
 	- Update contact email
+
+2.1 (1 Oktober 2011)
+	- PIN Challenge 
+
+2.2 (25 Maret 2012)
+	- History Transaksi 
+
+3.0 (16 Agustus 2012)
+	- Transfer antar Bank
